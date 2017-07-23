@@ -1,0 +1,23 @@
+.back {
+background-image: url("back.jpg")no-repeat center center;
+background-size: 100% 100%;
+padding-top: 11%;
+padding-bottom: 11%;
+height: 100%;
+}
+h3{
+	color: yellow ;
+	text-align: center  ;
+	font-weight: 500;
+}
+h5{
+	color: white;
+	text-align: center;
+	margin: auto;
+}
+img{
+	margin: auto;
+}
+div.fixed{
+	position-right: fixed;
+}

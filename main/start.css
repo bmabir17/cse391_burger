@@ -1,0 +1,56 @@
+.bodyD{
+	background-image: url("startp.jpg") ;
+	font-family: 'Sofia';font-size: 40px;
+
+	 position: center ;
+	  opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+p.italic {
+   
+}
+.h1design{
+    color: white;
+     text-align: center;
+     background-color: black;
+     
+   
+}
+.button {
+    background-color: white; /* Green */
+    border: none;
+    color: white;
+   padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+
+.button3 {
+    background-color: white; 
+    color: white; 
+    border: 2px solid white;
+    font-family: 'Lemonada', cursive;font-size: 25px;
+
+}
+
+.button3:hover {
+    background-color: white;
+    color: black;
+}
+
+a.button{
+	-webkit-appearance:button;
+	-moz-appearance:button;
+	appearance: button;
+
+	text-decoration: none;
+	color: white;
+}
