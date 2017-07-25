@@ -32,9 +32,9 @@ include_once 'admin_header.php'
             <select name="catagory">
                 <option value="bun">bun</option>
                 <option value="sause">Sause</option>
-                <option value="chesse">cheese</option>
+                <option value="cheese">Cheese</option>
                 <option value="topings">Topings</option>
-                <option value="topings">Meats</option>
+                <option value="meats">Meats</option>
 
             </select>
         </div>

@@ -1,3 +1,65 @@
+<?php
+    include_once 'db.php';
+    $sql="SELECT * FROM `item` WHERE `catagory`='bun'";
+    $result = $con->query($sql);
+    $num_result = $result->num_rows;
+
+    if ($num_result > 0) {
+
+        while ($rows = $result->fetch_assoc()) {
+
+            $data_bun[] = $rows;
+        }
+    }
+
+    $sql="SELECT * FROM `item` WHERE `catagory`='cheese'";
+    $result = $con->query($sql);
+    $num_result = $result->num_rows;
+
+    if ($num_result > 0) {
+
+        while ($rows = $result->fetch_assoc()) {
+
+            $data_cheese[] = $rows;
+        }
+    }
+
+    $sql="SELECT * FROM `item` WHERE `catagory`='sause'";
+    $result = $con->query($sql);
+    $num_result = $result->num_rows;
+
+    if ($num_result > 0) {
+
+        while ($rows = $result->fetch_assoc()) {
+
+            $data_sause[] = $rows;
+        }
+    }
+
+    $sql="SELECT * FROM `item` WHERE `catagory`='topings'";
+    $result = $con->query($sql);
+    $num_result = $result->num_rows;
+
+    if ($num_result > 0) {
+
+        while ($rows = $result->fetch_assoc()) {
+
+            $data_topings[] = $rows;
+        }
+    }
+    $sql="SELECT * FROM `item` WHERE `catagory`='meats'";
+    $result = $con->query($sql);
+    $num_result = $result->num_rows;
+
+    if ($num_result > 0) {
+
+        while ($rows = $result->fetch_assoc()) {
+
+            $data_meats[] = $rows;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +73,8 @@
 	<link rel="stylesheet" type="text/css" href="mainpage.css">
 	<link rel="stylesheet" type="text/css" href="cart.css">
 	<script src="sidenav.js" ></script>
+    <script src="mainpage.js"></script>
+
 </head>
 <body>
 
@@ -19,7 +83,7 @@
 		
 
 		<div class="row" style="background-image: url('back.jpg');">
-			<div class="col-md-2" style="background-color:black; position: fixed-left; min-height: 670px;"><nav class="navbar navbar-inverse sidebar" role="navigation" class="container-fluid">
+			<div class="col-md-2" style="background-color:black; position:fixed-left; min-height: 670px;"><nav class="navbar navbar-inverse sidebar" role="navigation" class="container-fluid">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -71,33 +135,109 @@
 			
 			</div>
 			<div class="col-md-7" >
+                <!-- For Bun -->
 				<div class="col-md-12">
-				
-				<h3 >CHOOSE YOUR BUN </h3>
-				<div class="col-md-4">
-					<img src="images/SESAME%20AND%20POPPY%20SEED%20BUN.png"><br><h5>SESAME AND POPPY SEED BUN</h5>
-				</div>
-				<div class="col-md-4" >
-					<img src="artisan.png"><br><h5>ARTISAN-STYLE BAKERY ROLL</h5>
-				</div>
-				<div class="col-md-4">
-					<img src="angus.png"><br><h5>SESAME AND POPPY SEED BUN</h5>
-				</div>
+                    <h3 >CHOOSE YOUR BUN </h3>
+                    <?php
+                    $counter_list = 1;
+                    if ($data_bun != null):
+                        foreach ($data_bun as $value):
+                            $value_id=$value['I_ID'];
+                            $value_name=$value['Name'];
+                            $value_price=$value['price'];
+                            ?>
+                            <div class="col-md-4" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>')">
+                                <img src="<?= $value['image_dir']; ?>">
+                                <br>
+                                <h5><?php echo $value['Name']; ?></h5>
+                                <br>
+                                <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
+                            </div>
 
-				</div>
-				<div class="col-md-12">
-				
-				<h3 >MAKE IT CHEESY (;) !!</h3>
-				<div class="col-md-4">
-					<img src="classic.png"><br><h5>CLASSIC CHESSE :P </h5>
-				</div>
-				<div class="col-md-4">
-					<img src="montery.png"><br><h5>MONTERY JACK JALAPENO</h5>
-				</div>
-				<div class="col-md-4" >
-					<img src="natural.png"><br><h5>NATURAL CHEDDAR</h5>
-				</div>
-				</div>
+                            <?php
+                            $counter_list++;
+                        endforeach;
+                    endif;
+                    ?>
+                </div>
+                <!-- For cheese -->
+                <div class="col-md-12">
+                    <h3 >MAKE IT CHEESY!! </h3>
+                    <?php
+                    $counter_list = 1;
+                    if ($data_cheese != null):
+                        foreach ($data_cheese as $value):
+                            ?>
+                            <div class="col-md-4">
+                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
+                            </div>
+                            <?php
+                            $counter_list++;
+                        endforeach;
+                    endif;
+                    ?>
+                </div>
+                <div class="col-md-12">
+                    <h3 >LET'S GET SAUCY !</h3>
+                    <?php
+                    $counter_list = 1;
+                    if ($data_sause != null):
+                        foreach ($data_sause as $value):
+                            ?>
+                            <div class="col-md-2">
+                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
+
+                            </div>
+
+                            <?php
+                            $counter_list++;
+                        endforeach;
+                    endif;
+                    ?>
+                </div>
+                <!-- For cheese -->
+                <div class="col-md-12">
+                    <h3 >TOP IT OFF! </h3>
+                    <?php
+                    $counter_list = 1;
+                    if ($data_topings != null):
+                        foreach ($data_topings as $value):
+                            ?>
+                            <div class="col-md-2">
+                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
+
+                            </div>
+
+                            <?php
+                            $counter_list++;
+                        endforeach;
+                    endif;
+                    ?>
+                </div>
+                <div class="col-md-12">
+                    <h3 >TURN UP THE TASTE</h3>
+                    <?php
+                    $counter_list = 1;
+                    if ($data_meats != null):
+                        foreach ($data_meats as $value):
+                            ?>
+                            <div class="col-md-4">
+                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
+
+                            </div>
+
+                            <?php
+                            $counter_list++;
+                        endforeach;
+                    endif;
+                    ?>
+                </div>
+
+
 				<div class="col-md-12">
 				
 				<h3 >LET'S GET SAUCY !</h3>
@@ -158,7 +298,7 @@
 			<div class="col-md-3 " style="background-color:#222222; min-height:670px; ">
                     
 					<h3 style="color: gray; text-align:  center;">Your Ingradients !!</h3>
-					<table class="table table-striped table-hover " style="color:lightgray; background-color: #414045; ">
+					<table class="table table-striped table-hover " id="cart_table" style="color:lightgray; background-color: #414045; ">
 						<tbody>
 							<tr  style="background-color: black">
 								<th>Ingradients</th>

@@ -59,9 +59,12 @@ if ($num_result > 0) {
                             <td><?php echo $value['catagory']; ?></td>
                             <td><?php echo $value['price']; ?></td>
                             <td><?php echo $value['quantity'];?></td>
+                            <td><?php echo $value['I_ID'];?></td>
                             <td>
                                 <a href="input_edit.php\?id=<?php echo $value['I_ID']; ?>"> <input type="button" value="EDIT" />   </a>
-                                <a href="delete.php\?id=<?php echo $value['I_ID']; ?>"> <input type="button" value="DELETE" /></a>
+                                 <a href="delete.php\?id=<?php echo $value['I_ID']; ?>"> <input type="button" value="DELETE" />   </a>
+                                
+                                <!-- <a href="delete.php\?id=<?php echo $value['I_ID']; ?>"> <input type="button" value="DELETE" /></a>-->
                             </td>
 
                         </tr>
