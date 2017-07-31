@@ -5,7 +5,8 @@
 current_cart_name=[]; //This array stores all the name of the added items
 current_cart_price=[];//This array stores all the price of the added items
 current_cart_quantity=[];//This array stores all the quantity of the added items
-
+total_price_item=0;
+total_price_cart=0;
 function addToCart(item_id,item_name,item_price) {
     //alert(item_array);
     //Store the item info's
@@ -54,6 +55,12 @@ function addItemRow(item_id) {
     priceBox.innerHTML=current_cart_price[item_id];
     var currentCell= currentRow.insertCell(-1);
     currentCell.appendChild(priceBox);
+
+    total_price_item=current_cart_price[item_id]*current_cart_quantity[item_id];
+    var totalBox_item=document.getElementById("td");
+    totalBox_item.innerHTML=total_price_item;
+    var currentCell=currentRow.insertCell(-1);
+    currentCell.appendChild(totalBox_item);
 }
 function addItemQuantity(item_id) {
 
