@@ -79,7 +79,7 @@
 <body>
 
 
-	<div class="container-fluid" >
+	<div class="container-fluid" id="container" >
 		
 
 		<div class="row" style="background-image: url('back.jpg');">
@@ -312,17 +312,10 @@
 								<td >£250.00</td>
 								<td >£250.00</td>
 							</tr>
-							<tr style="background-color: black"> 
-								<th colspan="3" ><span class="pull-right">Sub Total</span></th>
-								<th>£250.00</th>
-							</tr>
-							<tr style="background-color: #222222;">
-								<th colspan="3"><span class="pull-right">VAT 20%</span></th>
-								<th >£50.00</th>
-							</tr>
-							<tr style="background-color: black">
+
+							<tr id="grandTotal" style="background-color: black">
 								<th colspan="3" ><span class="pull-right">Total</span></th>
-								<th>£300.00</th>
+								<th id="grandTotalBox" >£300.00</th>
 							</tr>
 							<tr>
 								
@@ -330,7 +323,7 @@
 							</tr>
 						</tbody>
 					</table> 
-					<a href="#" class="pull-right btn btn-success" style="background-color: darkgray; border:0px; color: black; ">Checkout</a>
+					<a onclick="onCheckOut()" class="pull-right btn btn-success" style="background-color: darkgray; border:0px; color: black; ">Checkout</a>
 					<a href="#" class="btn btn-primary" style="background-color: darkgray; border:0px; color: black; ">Continue Shopping</a>         
 
 				
