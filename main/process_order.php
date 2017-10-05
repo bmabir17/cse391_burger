@@ -58,6 +58,9 @@ if(!$con){
 
 <div class="container">
     <div class="row">
+        <?php include 'customerNav.php'; ?>
+    </div>
+    <div class="row" style="padding: 50px;">
         <div class="panel panel-default">
             <!-- Default panel contents -->
             <div class="panel-heading">Order Confirmation</div>

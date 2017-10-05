@@ -36,6 +36,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
     }else{
         echo 'Login Failed.';
+        header('refresh:1; url=start.php');
     }
 
 

@@ -47,16 +47,19 @@ function addItemRow(item_id) {
 
     //Add Name
     var nameBox=document.createElement("td");
+    nameBox.style.color="#fff";
     nameBox.innerHTML=current_cart_name[item_id];
     var currentCell= currentRow.insertCell(-1);
     currentCell.appendChild(nameBox);
     //Add Quantity
     var quanttityBox=document.createElement("td");
+    quanttityBox.style.color="#fff";
     quanttityBox.innerHTML=current_cart_quantity[item_id];
     var currentCell= currentRow.insertCell(-1);
     currentCell.appendChild(quanttityBox);
     //Add price
     var priceBox=document.createElement("td");
+    priceBox.style.color="#fff";
     priceBox.innerHTML=current_cart_price[item_id];
     var currentCell= currentRow.insertCell(-1);
     currentCell.appendChild(priceBox);
@@ -66,6 +69,7 @@ function addItemRow(item_id) {
     total_price_item=parseInt(current_cart_price[item_id])*parseInt(current_cart_quantity[item_id]);
     //console.log(total_price_item);
     var totalBox_item=document.createElement("td");
+    totalBox_item.style.color="#fff";
     totalBox_item.innerHTML=total_price_item;
     var currentCell=currentRow.insertCell(-1);
     //alert(totalBox_item);
