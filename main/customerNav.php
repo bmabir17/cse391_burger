@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse  navbar-fixed-top"  role="navigation" >
+<nav class="navbar navbar-default  navbar-fixed-top"  role="navigation" >
 			
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -28,9 +28,11 @@
 							<a href="#"><span class="fa fa-envelope-o"></span> Contact</a>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right"  >
 						<li>
-							<a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> login</a>
+							<a data-toggle="modal" data-target="#loginModal" class="btn" style="padding-right: 40px;">
+								<span class="glyphicon glyphicon-log-in"></span> login
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -59,9 +61,10 @@
 									<input type="checkbox"> Remember me
 								</label>
 							</div>
-							<button type="submit" class="btn btn-info btn-xs">Sign in</button>
+							<button type="submit" class="btn btn-success btn-xs">Sign in</button>
 							<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cancel</button>
 						</form>
+						<a href="signup.php">Want to register as a manager?</a>
 					</div>
 					<!--
 		            <div class="modal-footer">

@@ -66,9 +66,9 @@
 	<title>Make your own burger</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="sidenav.css">
 	<link rel="stylesheet" type="text/css" href="mainpage.css">
 	
@@ -145,9 +145,10 @@
                             $value_id=$value['I_ID'];
                             $value_name=$value['Name'];
                             $value_price=$value['price'];
+                            $value_catagory=$value['catagory'];
                             ?>
-                            <div class="col-md-4" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>')">
-                                <img src="<?= $value['image_dir']; ?>">
+                            <div class="col-md-4" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>','<?php echo $value_catagory; ?>',)">
+                                <img src="<?= $value['image_dir']; ?>" style="cursor: pointer; cursor: hand;" >
                                 <br>
                                 <h5><?php echo $value['Name']; ?></h5>
                                 <br>
@@ -172,7 +173,7 @@
                             $value_price=$value['price'];
                             ?>
                             <div class="col-md-4" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>')">
-                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <img src="<?= $value['image_dir']; ?>" style="cursor: pointer; cursor: hand;"><br><h5><?php echo $value['Name']; ?></h5>
                                 <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
                             </div>
                             <?php
@@ -192,7 +193,7 @@
                             $value_price=$value['price'];
                             ?>
                             <div class="col-md-2" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>')">
-                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <img src="<?= $value['image_dir']; ?>" style="cursor: pointer; cursor: hand;"><br><h5><?php echo $value['Name']; ?></h5>
                                 <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
 
                             </div>
@@ -215,7 +216,7 @@
                             $value_price=$value['price'];
                             ?>
                             <div class="col-md-2" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>')">
-                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <img src="<?= $value['image_dir']; ?>" style="cursor: pointer; cursor: hand;"><br><h5><?php echo $value['Name']; ?></h5>
                                 <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
 
                             </div>
@@ -237,7 +238,7 @@
                             $value_price=$value['price'];
                             ?>
                             <div class="col-md-4" onclick="addToCart('<?php echo $value_id; ?>','<?php echo $value_name; ?>','<?php echo $value_price; ?>')">
-                                <img src="<?= $value['image_dir']; ?>"><br><h5><?php echo $value['Name']; ?></h5>
+                                <img src="<?= $value['image_dir']; ?>" style="cursor: pointer; cursor: hand;"><br><h5><?php echo $value['Name']; ?></h5>
                                 <h6 style="color: white;text-align: center;margin: auto;">BDT: <?php echo $value['price']; ?></h6>
 
                             </div>

@@ -7,12 +7,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
 	<link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="navbar.css">
 	<style type="text/css">
 		#background {
 	    position: fixed;
@@ -69,8 +71,18 @@
 		}
 
 		.hero-section .hero-section-text {
-		  color: #fefefe;
-		  text-shadow: 1px 1px 2px #0a0a0a;
+		  
+		}
+		.hero-text{
+			color: white;
+		  	font-family: 'Slabo+27px', serif;
+		  	text-shadow: 4px 4px 4px black;
+		  	font-size: 108px;
+		}
+		.hero-subtext{
+			color: black;
+			text-shadow: 4px 4px 4px #aaa;
+		  	font-size: 38px;
 		}
 
 	</style>
@@ -80,7 +92,7 @@
 <div class="content">
 	<video autoplay loop muted poster="startp.jpg" id="background" style="background: rgba(0, 0.3, 0.5, 0.9);">
 
-        <source src="video/v1.mp4" type="video/mp4">
+        <source src="video/v2.mp4" type="video/mp4">
 
     </video>
 </div>
@@ -91,14 +103,14 @@
 	</div>
 	<div class="hero-section">
 	  <div class="hero-section-text">
-	    <h1><p > Make your <span>Own</span> Taste<br></p></h1>
+	    <h1 ><p class="hero-text" > Make your <span>Own</span> Taste<br></p></h1>
 	    <br>
-	    <h3>So lets start !!</h3>
+	    <h3 class="hero-subtext">So lets start !!</h3>
 	    
-	    	<button   type="button" class="btn btn-primary btn-lg">
-				<a href="mainpage.php" style="color:white;">Custom Burger Order</a> 
+	    	<button   type="button" class="btn btn-secondary btn-lg" >
+				<a href="mainpage.php" style="color:#39a111;">Custom Burger Order</a> 
 			</button>
-			<button   type="button" class="btn btn-primary btn-lg">
+			<button   type="button" class="btn btn-primary btn-lg" style="background-color: #39a111;">
 				<a href="mainpage.php" style="color:white;"> Regular Menu</a> 
 			</button>
 		

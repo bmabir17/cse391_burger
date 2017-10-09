@@ -34,3 +34,6 @@ div.fixed{
 th {
     color:white !important;
 }
+.item-img{
+	cursor: pointer; cursor: hand;
+}
